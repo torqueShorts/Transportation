@@ -31,3 +31,6 @@ These are the systems you would need to run the code
 - junit 4.11
 - Maven
 
+## UML Diagram
+
+![](UMLDiagram.jpg)
