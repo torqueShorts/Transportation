@@ -33,4 +33,4 @@ These are the systems you would need to run the code
 
 ## UML Diagram
 
-![](UMLDiagram.jpg)
+![](umlDiagram.jpg)
