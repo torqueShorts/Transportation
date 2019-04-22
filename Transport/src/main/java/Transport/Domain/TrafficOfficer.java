@@ -93,5 +93,13 @@ public class TrafficOfficer {
     }
 
 
-
+    @Override
+    public String toString() {
+        return "TrafficOfficer: " +
+                "\nofficerID: " + officerID +
+                "\nName: " + name +
+                "\nSurname: " + surname +
+                "\nFine Due: " + fineDue +
+                "\nWarrant: "+ warrant;
+    }
 }

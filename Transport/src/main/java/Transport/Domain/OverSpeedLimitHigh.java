@@ -4,6 +4,8 @@ public class OverSpeedLimitHigh {
 
     private int speedLimit;
     private int carSpeed;
+    private String date;
+    private Fine fine;
 
     private OverSpeedLimitHigh()
     {
@@ -14,6 +16,8 @@ public class OverSpeedLimitHigh {
     {
         this.speedLimit = builder.speedLimit;
         this.carSpeed = builder.carSpeed;
+        this.date = builder.date;
+        this.fine = builder.fine;
     }
 
     public int getSpeedLimit()
@@ -26,10 +30,22 @@ public class OverSpeedLimitHigh {
         return carSpeed;
     }
 
+    public String getDate()
+    {
+        return date;
+    }
+
+    public Fine getFine()
+    {
+        return fine;
+    }
+
     public static class OverHighBuilder
     {
         private int speedLimit;
         private int carSpeed;
+        private String date;
+        private Fine fine;
 
 
         public OverHighBuilder speedLimit(int speedLimit)
@@ -44,6 +60,18 @@ public class OverSpeedLimitHigh {
             return this;
         }
 
+        public OverHighBuilder date(String date)
+        {
+            this.date = date;
+            return this;
+        }
+
+        public OverHighBuilder fine(Fine fine)
+        {
+            this.fine = fine;
+            return this;
+        }
+
         public OverSpeedLimitHigh build()
         {
             return new OverSpeedLimitHigh(this);
@@ -51,13 +79,14 @@ public class OverSpeedLimitHigh {
 
     }
 
+    @Override
 
-
-
-
-
-
-
+    public String toString()
+    {
+        return "Vehicle License: " + fine.getVehLicense() + "\nDriver ID: " + fine.getDriverID() + "\nType of offence: " + fine.getType()
+                + "\nFine Paid: " + fine.getFinePaid() + "\nThe speed of the driver: " + carSpeed +"\nThe speed limit of the road: "
+                + speedLimit +   "\nCourt summons date: " + date;
+    }
 
 
 }

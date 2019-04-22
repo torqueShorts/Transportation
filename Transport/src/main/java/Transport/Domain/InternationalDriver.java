@@ -2,8 +2,10 @@ package Transport.Domain;
 
 public class InternationalDriver {
 
+    private Driver drive;
     private String name;
     private String surname;
+    private String dateOfBirth;
     private boolean vehOwned;
 
     private InternationalDriver()
@@ -12,8 +14,10 @@ public class InternationalDriver {
 
     private InternationalDriver(IntDriverBuidler builder)
     {
+        this.drive = builder.drive;
         this.name = builder.name;
         this.surname = builder.surname;
+        this.dateOfBirth = builder.dateOfBirth;
         this.vehOwned = builder.vehOwned;
     }
 
@@ -28,16 +32,29 @@ public class InternationalDriver {
         return surname;
     }
 
+    public String getDateOfBirth()
+    {
+        return dateOfBirth;
+    }
+
     public Boolean getvehOwned()
     {
         return vehOwned;
     }
 
+    public Driver getDrive()
+    {
+        return drive;
+    }
+
+
 
     public static class IntDriverBuidler
     {
+        private Driver drive;
         private String name;
         private String surname;
+        private String dateOfBirth;
         private boolean vehOwned;
 
         public IntDriverBuidler name(String name)
@@ -52,9 +69,21 @@ public class InternationalDriver {
             return this;
         }
 
+        public IntDriverBuidler dateOfBirth(String dateOfBirth)
+        {
+            this.dateOfBirth = dateOfBirth;
+            return this;
+        }
+
         public IntDriverBuidler vehOwned(boolean vehOwned)
         {
             this.vehOwned = vehOwned;
+            return this;
+        }
+
+        public IntDriverBuidler driver(Driver drive)
+        {
+            this.drive = drive;
             return this;
         }
 
@@ -64,5 +93,16 @@ public class InternationalDriver {
         }
 
     }
+
+    @Override
+
+    public String toString()
+    {
+        return "International Driver: \nDriver ID: " + drive.getDriverID() + "\nDriver name: " + name + "\nDriver surname: " + surname + "\nDriver DOB: " + dateOfBirth +
+                "\nDriver international: " + drive.getInternational() + "\nVehicle license: " + drive.getVehLicense() + "\nVehicle Owned: " +
+                vehOwned;
+    }
+
+
 
 }

@@ -4,7 +4,6 @@ public class Vehicle {
 
     private String vehicleLicense;
     private String type;
-    private String colour;
     private String driverID;
 
     private Vehicle()
@@ -16,8 +15,7 @@ public class Vehicle {
     {
         this.vehicleLicense = builder.vehicleLicense;
         this.type = builder.type;
-        this.colour = builder.colour;
-        this.driverID = builder. driverID;
+        this.driverID = builder.driverID;
     }
 
     public String getVehicleLicense()
@@ -30,20 +28,15 @@ public class Vehicle {
         return type;
     }
 
-    public String getColour()
-    {
-        return colour;
-    }
-
     public String getDriverID()
     {
         return driverID;
     }
 
+
     public static class VehicleBuilder {
         private String vehicleLicense;
         private String type;
-        private String colour;
         private String driverID;
 
         public VehicleBuilder vehicleLicense(String vehicleLicense) {
@@ -53,11 +46,6 @@ public class Vehicle {
 
         public VehicleBuilder type(String type) {
             this.type = type;
-            return this;
-        }
-
-        public VehicleBuilder colour(String colour) {
-            this.colour = colour;
             return this;
         }
 
@@ -72,13 +60,14 @@ public class Vehicle {
         }
 
 
-        @Override
-
+    }
         public String toString() {
-            return "Vehicle {" + "\n Vehicle License = " + vehicleLicense + "\n Driver ID: " + driverID + "\n Colour: " + colour + "\n" +
-                    " Type: " + type + "\n " + "} ";
+            return "Vehicle: " +
+                    "\nVehicle License: " + vehicleLicense +
+                    "\nDriver ID: " + driverID +
+                    "\nType: " + type;
         }
 
 
-    }
+
 }

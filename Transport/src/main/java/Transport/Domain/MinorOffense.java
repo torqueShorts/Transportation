@@ -3,7 +3,7 @@ package Transport.Domain;
 public class MinorOffense {
 
     private String type;
-    private int amount;
+    private Fine fine;
 
     private MinorOffense()
     {
@@ -13,7 +13,7 @@ public class MinorOffense {
     private MinorOffense(MinorOffenceBuilder builder)
     {
         this.type = builder.type;
-        this.amount = builder.amount;
+        this.fine = builder.fine;
     }
 
     public String getType()
@@ -21,25 +21,28 @@ public class MinorOffense {
         return type;
     }
 
-    public int getAmount()
+    public Fine getFine()
     {
-        return amount;
+        return fine;
     }
+
 
     public static class MinorOffenceBuilder {
 
         private String type;
-        private int amount;
+        private Fine fine;
 
         public MinorOffenceBuilder type(String type) {
             this.type = type;
             return this;
         }
 
-        public MinorOffenceBuilder amount(int amount) {
-            this.amount = amount;
+        public MinorOffenceBuilder fine(Fine fine)
+        {
+            this.fine = fine;
             return this;
         }
+
 
         public MinorOffense build() {
             return new MinorOffense(this);
@@ -48,9 +51,12 @@ public class MinorOffense {
 
     }
 
+    @Override
 
-
-
-
+    public String toString()
+    {
+        return "Type of Minor offence: " + type + "\nVehicle License: " + fine.getVehLicense() + "\nDriver ID: " + fine.getDriverID()
+                + "\nFine type: " + fine.getType() + "\nFine Paid: " + fine.getFinePaid();
+    }
 
 }

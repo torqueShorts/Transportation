@@ -3,8 +3,10 @@ package Transport.Domain;
 public class NationalDriver {
 
 
+    private Driver drive;
     private String name;
     private String surname;
+    private String dateOfBirth;
 
     private NationalDriver()
     {
@@ -12,10 +14,17 @@ public class NationalDriver {
 
     private NationalDriver(NatDriverBuidler builder)
     {
+        this.drive = builder.drive;
         this.name = builder.name;
         this.surname = builder.surname;
+        this.dateOfBirth = builder.dateOfBirth;
     }
 
+
+    public Driver getDrive()
+    {
+        return drive;
+    }
 
     public String getName()
     {
@@ -27,11 +36,18 @@ public class NationalDriver {
         return surname;
     }
 
+    public String getDateOfBirth()
+    {
+        return dateOfBirth;
+    }
+
 
     public static class NatDriverBuidler
     {
+        private Driver drive;
         private String name;
         private String surname;
+        private String dateOfBirth;
 
         public NatDriverBuidler name(String name)
         {
@@ -45,6 +61,17 @@ public class NationalDriver {
             return this;
         }
 
+        public NatDriverBuidler dateOfBirth(String dateOfBirth)
+        {
+            this.dateOfBirth = dateOfBirth;
+            return this;
+        }
+
+        public NatDriverBuidler driver(Driver drive)
+        {
+            this.drive = drive;
+            return this;
+        }
 
         public NationalDriver build()
         {
@@ -53,6 +80,12 @@ public class NationalDriver {
 
     }
 
+    @Override
 
+    public String toString()
+    {
+        return "National Driver: \nDriver ID: " + drive.getDriverID() + "\nDriver name: " + name + "\nDriver surname: " + surname + "\nDriver DOB: " + dateOfBirth +
+                "\nDriver international: " + drive.getInternational() + "\nVehicle license: " + drive.getVehLicense();
+    }
 
 }

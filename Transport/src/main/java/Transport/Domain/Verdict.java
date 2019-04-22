@@ -66,6 +66,10 @@ public class Verdict {
 
     }
 
+    public String toString()
+    {
+        return "Trial: \nReason valid: " + reason + "\nReduced amount: " + reducedAmount + "\nWarrant: " + warrant;
+    }
 
 
 }

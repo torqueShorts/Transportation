@@ -1,14 +1,16 @@
 package Transport.Factory;
 
 import Transport.Domain.DisobeySigns;
+import Transport.Domain.Fine;
 
 public class DisobeySignsFactory {
 
-    public static DisobeySigns getDisobeySign(String sign, int amount)
+    public static DisobeySigns getDisobeySign(String sign, int amount, Fine fine)
     {
         return new DisobeySigns.DisobeySignsBuilder()
                 .sign(sign)
                 .amount(amount)
+                .fine(fine)
                 .build();
     }
 

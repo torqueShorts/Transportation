@@ -4,11 +4,12 @@ import Transport.Domain.Trial;
 
 public class TrialFactory {
 
-    public static Trial getTrial(String date, boolean reason)
+    public static Trial getTrial(String date, String driverID, String vehicleID)
     {
         return new Trial.TrialBuilder()
                 .date(date)
-                .reason(reason)
+                .driverID(driverID)
+                .vehicleID(vehicleID)
                 .build();
     }
 

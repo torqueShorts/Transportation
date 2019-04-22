@@ -2,6 +2,7 @@ package Transport.Domain;
 
 public class HeavyDuty {
 
+    private Vehicle veh;
     private String colour;
     private String model;
 
@@ -14,6 +15,7 @@ public class HeavyDuty {
     {
         this.colour = builder.colour;
         this.model = builder.model;
+        this.veh = builder.veh;
 
     }
 
@@ -27,8 +29,14 @@ public class HeavyDuty {
         return model;
     }
 
+    public Vehicle getVeh()
+    {
+        return veh;
+    }
+
     public static class HeavyDutyBuilder
     {
+        private Vehicle veh;
         private String colour;
         private String model;
 
@@ -44,11 +52,24 @@ public class HeavyDuty {
             return this;
         }
 
+        public HeavyDutyBuilder vehicle(Vehicle veh)
+        {
+            this.veh = veh;
+            return this;
+        }
+
         public HeavyDuty build()
         {
             return new HeavyDuty(this);
         }
 
+    }
+
+    @Override
+
+    public String toString() {
+        return "HeavyDuty: \n HeavyDuty colour: " + colour + "\n HeavyDuty model: " + model + "\n " +
+                "HeavyDuty license: " + veh.getVehicleLicense() + "\n Vehicle type: " + veh.getType() + "\n Driver ID: " + veh.getDriverID();
     }
 
 
