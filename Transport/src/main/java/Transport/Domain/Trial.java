@@ -3,7 +3,9 @@ package Transport.Domain;
 public class Trial {
 
     private String date;
-    private boolean reason;
+    private String driverID;
+    private String vehicleID;
+
 
     private Trial()
     {
@@ -13,7 +15,8 @@ public class Trial {
     private Trial(TrialBuilder builder)
     {
         this.date = builder.date;
-        this.reason = builder.reason;
+        this.driverID = builder.driverID;
+        this.vehicleID = builder.vehicleID;
     }
 
     public String getDate()
@@ -21,15 +24,16 @@ public class Trial {
         return date;
     }
 
-    public boolean getReason()
-    {
-        return reason;
-    }
+    public String getDriverID(){ return driverID; }
+
+    public String getVehicleID(){ return vehicleID; }
 
     public static class TrialBuilder
     {
         private String date;
-        private boolean reason;
+        private String driverID;
+        private String vehicleID;
+
 
         public TrialBuilder date(String date)
         {
@@ -37,24 +41,29 @@ public class Trial {
             return this;
         }
 
-        public TrialBuilder reason(boolean reason)
+        public TrialBuilder driverID(String driverID)
         {
-            this.reason = reason;
+            this.driverID = driverID;
             return this;
         }
+
+        public TrialBuilder vehicleID(String vehicleID)
+        {
+            this.vehicleID = vehicleID;
+            return this;
+        }
+
 
         public Trial build()
         {
             return new Trial(this);
         }
 
-
-
     }
 
-
-
-
-
+    public String toString()
+    {
+        return "Date of Trial: " + date + "\nDriver ID: " + driverID + "\nVehicle ID: " + vehicleID;
+    }
 
 }

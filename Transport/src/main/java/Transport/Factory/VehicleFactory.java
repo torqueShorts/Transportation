@@ -5,9 +5,13 @@ import Transport.Domain.Vehicle;
 public class VehicleFactory {
 
 
-    public static Vehicle getVehicle(String vehLicense, String type, String colour, String driverID)
+    public static Vehicle getVehicle(String vehLicense, String driverID, String type)
     {
-        return new Vehicle.VehicleBuilder().vehicleLicense(vehLicense).type(type).colour(colour).driverID(driverID).build();
+        return new Vehicle.VehicleBuilder()
+                .vehicleLicense(vehLicense)
+                .driverID(driverID)
+                .type(type)
+                .build();
     }
 
 

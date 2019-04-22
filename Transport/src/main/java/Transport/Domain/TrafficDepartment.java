@@ -48,15 +48,13 @@ public class TrafficDepartment {
             return new TrafficDepartment(this);
         }
 
-
-
-
-
     }
 
 
-
-
+    public String toString()
+    {
+        return "Department address: " + address + "\nDepartment code: " + deptCode;
+    }
 
 
 }

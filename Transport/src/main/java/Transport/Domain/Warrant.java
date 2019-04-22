@@ -63,7 +63,12 @@ public class Warrant {
             return new Warrant(this);
         }
 
+    }
 
+
+    public String toString()
+    {
+        return "Driver ID: " + driverID + "\nVehicle License: " + vehLicense + "\nWarrant valid: " + active;
     }
 
 

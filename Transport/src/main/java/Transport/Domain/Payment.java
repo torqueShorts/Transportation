@@ -5,6 +5,7 @@ public class Payment {
     private int amount;
     private String driverID;
     private String fineNum;
+    private boolean finePaid;
 
     private Payment()
     {
@@ -16,6 +17,7 @@ public class Payment {
         this.amount = builder.amount;
         this.driverID = builder.driverID;
         this.fineNum = builder.fineNum;
+        this.finePaid = builder.finePaid;
     }
 
     public int getAmount()
@@ -33,11 +35,17 @@ public class Payment {
         return fineNum;
     }
 
+    public boolean getFinePaid()
+    {
+        return finePaid;
+    }
+
     public static class PaymentBuilder
     {
         private int amount;
         private String driverID;
         private String fineNum;
+        private boolean finePaid;
 
         public PaymentBuilder amount(int amount)
         {
@@ -57,16 +65,24 @@ public class Payment {
             return this;
         }
 
+        public PaymentBuilder finePaid(boolean finePaid)
+        {
+            this.finePaid = finePaid;
+            return this;
+        }
+
         public Payment build()
         {
             return new Payment(this);
         }
 
-
-
     }
 
 
+    public String toString()
+    {
+        return "Payment amount: " + amount + "\nDriver ID: " + driverID + "\nFine number: " + fineNum + "\nFine paid: " + finePaid;
+    }
 
 
 

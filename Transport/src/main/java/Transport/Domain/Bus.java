@@ -1,8 +1,11 @@
 package Transport.Domain;
 
+import javax.swing.tree.VariableHeightLayoutCache;
+
 public class Bus {
 
 
+    private Vehicle veh;
     private String colour;
     private String model;
 
@@ -15,7 +18,7 @@ public class Bus {
     {
         this.colour = builder.colour;
         this.model = builder.model;
-
+        this.veh = builder.veh;
     }
 
     public String getColour()
@@ -28,8 +31,14 @@ public class Bus {
         return model;
     }
 
+    public Vehicle getVeh()
+    {
+        return veh;
+    }
+
     public static class BusBuilder
     {
+        private Vehicle veh;
         private String colour;
         private String model;
 
@@ -45,6 +54,12 @@ public class Bus {
             return this;
         }
 
+        public BusBuilder vehicle(Vehicle veh)
+        {
+            this.veh = veh;
+            return this;
+        }
+
         public Bus build()
         {
             return new Bus(this);
@@ -52,6 +67,12 @@ public class Bus {
 
     }
 
+    @Override
+
+    public String toString() {
+        return "Bus: \n Bus colour: " + colour + "\n Bus model: " + model + "\n " +
+                "Bus license: " + veh.getVehicleLicense() + "\n Vehicle type: " + veh.getType() + "\n Driver ID: " + veh.getDriverID();
+    }
 
 
 

@@ -86,8 +86,8 @@ public class TrafficChief {
     @Override
 
     public String toString() {
-        return "Traffic Chief {" + "\n Chief ID = " + chiefID + "\n Chief name: " + name + "\n Chief surname: " + surname + "\n" +
-                " Traffic Fine: " + fineCode + "} ";
+        return "Traffic Chief: " + "\nChief ID = " + chiefID + "\nChief name: " + name + "\nChief surname: " + surname + "\n" +
+                "Traffic Fine: " + fineCode;
     }
 
 }

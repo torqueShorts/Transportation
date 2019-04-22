@@ -4,7 +4,7 @@ public class Fine {
 
     private String vehLicense;
     private String driverID;
-    private int amount;
+    private String type;
     private boolean finePaid;
 
     private Fine()
@@ -16,8 +16,8 @@ public class Fine {
     {
         this.vehLicense = builder.vehLicense;
         this.driverID = builder.driverID;
-        this.amount = builder.amount;
         this.finePaid = builder.finePaid;
+        this.type = builder.type;
     }
 
     public String getVehLicense()
@@ -30,22 +30,22 @@ public class Fine {
         return driverID;
     }
 
-    public int getAmount()
-    {
-        return amount;
-    }
-
     public boolean getFinePaid()
     {
         return finePaid;
+    }
+
+    public String getType()
+    {
+        return type;
     }
 
     public static class FineBuilder
     {
         private String vehLicense;
         private String driverID;
-        private int amount;
         private boolean finePaid;
+        private String type;
 
 
         public FineBuilder vehLicense(String vehLicense)
@@ -60,15 +60,16 @@ public class Fine {
             return this;
         }
 
-        public FineBuilder amount(int amount)
-        {
-            this.amount = amount;
-            return this;
-        }
 
         public FineBuilder finePaid(boolean finePaid)
         {
             this.finePaid = finePaid;
+            return this;
+        }
+
+        public FineBuilder type(String type)
+        {
+            this.type = type;
             return this;
         }
 
@@ -77,6 +78,11 @@ public class Fine {
             return new Fine(this);
         }
 
+    }
+
+    public String toString()
+    {
+        return "";
     }
 
 

@@ -3,9 +3,6 @@ package Transport.Domain;
 public class Driver {
 
     private String driverID;
-    private String name;
-    private String surname;
-    private String dateOfBirth;
     private String vehLicense;
     private boolean international;
 
@@ -17,19 +14,28 @@ public class Driver {
             private Driver(DriverBuilder builder)
             {
                 this.driverID = builder.driverID;
-                this.name = builder.name;
-                this.surname = builder.surname;
-                this.dateOfBirth = builder.dateOfBirth;
                 this.vehLicense = builder.vehLicense;
                 this.international = builder.international;
+            }
+
+            public String getDriverID()
+            {
+                return driverID;
+            }
+
+            public String getVehLicense()
+            {
+                return vehLicense;
+            }
+
+            public boolean getInternational()
+            {
+                return international;
             }
 
 
             public static class DriverBuilder {
                 private String driverID;
-                private String name;
-                private String surname;
-                private String dateOfBirth;
                 private String vehLicense;
                 private boolean international;
 
@@ -38,20 +44,6 @@ public class Driver {
                     return this;
                 }
 
-                public DriverBuilder name(String name) {
-                    this.name = name;
-                    return this;
-                }
-
-                public DriverBuilder surname(String surname) {
-                    this.surname = surname;
-                    return this;
-                }
-
-                public DriverBuilder dateOfBirth(String dateOfBirth) {
-                    this.dateOfBirth = dateOfBirth;
-                    return this;
-                }
 
                 public DriverBuilder vehLicense(String vehLicense) {
                     this.vehLicense = vehLicense;
@@ -69,18 +61,12 @@ public class Driver {
                 }
 
 
-
-                @Override
-
-                public String toString() {
-                    return "Driver {" + "\n Drive ID = " + driverID + "\n Driver name: " + name + "\n Driver surname: " + surname + "\n" +
-                            " Driver DOB: " + dateOfBirth + "\n Vehicle license: " + vehLicense + "\n International ID:  " +international +"} ";
-                }
     }
 
 
+    public String toString() {
 
-
-
+        return "Driver ID: " + driverID + "\nVehicle license: " + vehLicense + "\nInternational: " + international;
+    }
 
 }

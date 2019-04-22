@@ -5,7 +5,7 @@ public class TrafficClerk {
     private String clerkID;
     private String name;
     private String surname;
-
+    private String fineCode;
     private boolean finePaid;
 
     private TrafficClerk(TrafficClerkBuilder builder)
@@ -13,6 +13,7 @@ public class TrafficClerk {
         this.clerkID = builder.clerkID;
         this.name = builder.name;
         this.surname = builder.surname;
+        this.fineCode = builder.fineCode;
         this.finePaid = builder.finePaid;
     }
 
@@ -37,10 +38,10 @@ public class TrafficClerk {
         return finePaid;
     }
 
-
-
-
-
+    public String getFineCode()
+    {
+        return fineCode;
+    }
 
 
     public static class TrafficClerkBuilder
@@ -49,7 +50,7 @@ public class TrafficClerk {
         private String clerkID;
         private String name;
         private String surname;
-
+        private String fineCode;
         private boolean finePaid;
 
         public TrafficClerkBuilder clerkID(String clerkID)
@@ -70,12 +71,17 @@ public class TrafficClerk {
             return this;
         }
 
+        public TrafficClerkBuilder fineCode(String fineCode)
+        {
+            this.fineCode = fineCode;
+            return this;
+        }
+
         public TrafficClerkBuilder finePaid(boolean finePaid)
         {
             this.finePaid = finePaid;
             return this;
         }
-
 
 
 
@@ -87,8 +93,9 @@ public class TrafficClerk {
 
     }
 
-
-
-
+    public String toString()
+    {
+        return "Clerk ID: " + clerkID + "\nClerk name: " + name + "\nClerk surname: " + surname + "\nFine code: " + fineCode + "\nFine Paid: " + finePaid;
+    }
 
 }
