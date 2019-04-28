@@ -1,7 +1,10 @@
 package Transport.Domain;
 
+import com.sun.deploy.util.VersionID;
+
 public class Verdict {
 
+    private String fineNum;
     private boolean reason;
     private int reducedAmount;
     private boolean warrant;
@@ -13,10 +16,13 @@ public class Verdict {
 
     private Verdict(VerdictBuilder builder)
     {
+        this.fineNum = builder.fineNum;
         this.reason = builder.reason;
         this.reducedAmount = builder.reducedAmount;
         this.warrant = builder.warrant;
     }
+
+    public String getFineNum(){ return fineNum; }
 
     public boolean getReason()
     {
@@ -35,9 +41,17 @@ public class Verdict {
 
     public static class VerdictBuilder
     {
+        private String fineNum;
         private boolean reason;
         private int reducedAmount;
         private boolean warrant;
+
+        public VerdictBuilder fineNum(String fineNum)
+        {
+            this.fineNum = fineNum;
+            return this;
+        }
+
 
         public VerdictBuilder reason(boolean reason)
         {
@@ -68,7 +82,7 @@ public class Verdict {
 
     public String toString()
     {
-        return "Trial: \nReason valid: " + reason + "\nReduced amount: " + reducedAmount + "\nWarrant: " + warrant;
+        return "Trial: \nFine number: " + fineNum + "\nReason valid: " + reason + "\nReduced amount: " + reducedAmount + "\nWarrant: " + warrant;
     }
 
 

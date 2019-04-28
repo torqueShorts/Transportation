@@ -2,6 +2,7 @@ package Transport.Domain;
 
 public class Trial {
 
+    private String trialID;
     private String date;
     private String driverID;
     private String vehicleID;
@@ -14,10 +15,13 @@ public class Trial {
 
     private Trial(TrialBuilder builder)
     {
+        this.trialID = builder.trialID;
         this.date = builder.date;
         this.driverID = builder.driverID;
         this.vehicleID = builder.vehicleID;
     }
+
+    public String getTrialID(){return trialID;}
 
     public String getDate()
     {
@@ -30,10 +34,17 @@ public class Trial {
 
     public static class TrialBuilder
     {
+        private String trialID;
         private String date;
         private String driverID;
         private String vehicleID;
 
+
+        public TrialBuilder trialID(String trialID)
+        {
+            this.trialID = trialID;
+            return this;
+        }
 
         public TrialBuilder date(String date)
         {
@@ -63,7 +74,7 @@ public class Trial {
 
     public String toString()
     {
-        return "Date of Trial: " + date + "\nDriver ID: " + driverID + "\nVehicle ID: " + vehicleID;
+        return "Trial ID: " + trialID + "\nDate of Trial: " + date + "\nDriver ID: " + driverID + "\nVehicle ID: " + vehicleID;
     }
 
 }

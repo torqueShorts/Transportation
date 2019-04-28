@@ -17,7 +17,7 @@ public class OverSpeedLimitHighFactoryTest {
         int carSpeed = 110;
         String date = "20/04/2020";
 
-        Fine value = fine.getFine("BS238749584", "081556748", "MajorOffence", false);
+        Fine value = fine.getFine("AR48752","BS238749584", "081556748", "MajorOffence", false);
 
         Assert.assertEquals("Vehicle License: BS238749584\nDriver ID: 081556748\nType of offence: MajorOffence" +
                 "\nFine Paid: false\nThe speed of the driver: 110\nThe speed limit of the road: 60\nCourt summons date: 20/04/2020",

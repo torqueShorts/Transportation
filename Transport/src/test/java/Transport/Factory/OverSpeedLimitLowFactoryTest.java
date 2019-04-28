@@ -17,7 +17,7 @@ public class OverSpeedLimitLowFactoryTest {
         int carSpeed = 80;
         int amount = 1500;
 
-        Fine value = fine.getFine("AC23898473", "084768532", "MinorOffence", false);
+        Fine value = fine.getFine("AR36475","AC23898473", "084768532", "MinorOffence", false);
 
         Assert.assertEquals("Vehicle License: AC23898473\nDriver ID: 084768532\nType of offence: MinorOffence" +
                 "\nFine Paid: false\nThe speed of the driver: 80\nThe speed limit of the road: 60\nAmount due: 1500",

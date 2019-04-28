@@ -18,7 +18,7 @@ public class DisobeySignsFactoryTest {
 
         String sign = "Stop";
         int amount = 500;
-        Fine value = fine.getFine("SW2637485", "0836748579", "MinorOffence", false);
+        Fine value = fine.getFine("AR346745","SW2637485", "0836748579", "MinorOffence", false);
 
         Assert.assertEquals("Vehicle License: SW2637485\nDriver ID: 0836748579\nType of offence: MinorOffence\nFine Paid: false\nThe sign disobeyed: Stop\nAmount due: 500",
                 DisobeySignsFactory.getDisobeySign(sign, 500, value).toString());

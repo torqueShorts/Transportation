@@ -10,12 +10,13 @@ public class VerdictFactoryTest {
     @Test
     public void getVerdict() {
 
+        String fineNum = "AF32704";
         boolean reason = true;
         int reAmount = 100;
         boolean warrant = false;
 
-        Assert.assertEquals("Trial: \nReason valid: true\nReduced amount: 100\nWarrant: false",
-                VerdictFactory.getVerdict(reason, reAmount, warrant).toString());
+        Assert.assertEquals("Trial: \nFine number: AF32704\nReason valid: true\nReduced amount: 100\nWarrant: false",
+                VerdictFactory.getVerdict(fineNum, reason, reAmount, warrant).toString());
 
 
     }

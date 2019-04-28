@@ -1,10 +1,9 @@
 package Transport.Factory;
 
+import Transport.Domain.TrafficClerk;
 import Transport.Domain.Vehicle;
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class MotobikeFactoryTest {
 
@@ -21,6 +20,22 @@ public class MotobikeFactoryTest {
                 MotobikeFactory.getMotorbike(colour,model, value).toString());
 
 
+
+    }
+
+    public static class TrafficClerkFactory {
+
+
+        public static TrafficClerk getTrafficClerk(String clerkID, String name, String surname, String fineCode, boolean finePaid)
+        {
+            return new TrafficClerk.TrafficClerkBuilder()
+                    .clerkID(clerkID)
+                    .name(name)
+                    .surname(surname)
+                    .fineCode(fineCode)
+                    .finePaid(finePaid)
+                    .build();
+        }
 
     }
 }
