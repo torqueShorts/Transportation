@@ -1,16 +1,18 @@
 package Transport.Factory;
 
+import Transport.Domain.Car;
 import Transport.Domain.Vehicle;
 
 public class VehicleFactory {
 
 
-    public static Vehicle getVehicle(String vehLicense, String driverID, String type)
+    public static Vehicle getVehicle(String vehLicense, String type, String driverID)
     {
+
         return new Vehicle.VehicleBuilder()
                 .vehicleLicense(vehLicense)
-                .driverID(driverID)
                 .type(type)
+                .driverID(driverID)
                 .build();
     }
 

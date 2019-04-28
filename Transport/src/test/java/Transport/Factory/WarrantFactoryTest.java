@@ -10,12 +10,13 @@ public class WarrantFactoryTest {
     @Test
     public void getWarrant() {
 
+        String warrantID = "VNT3847";
         String driverID = "08145896";
         String vehicleID = "AC239034";
         boolean actiive = true;
 
-        Assert.assertEquals("Driver ID: 08145896\nVehicle License: AC239034\nWarrant valid: true",
-                WarrantFactory.getWarrant(driverID,vehicleID,actiive).toString());
+        Assert.assertEquals("Warrant ID: VNT3847\nDriver ID: 08145896\nVehicle License: AC239034\nWarrant valid: true",
+                WarrantFactory.getWarrant(warrantID, driverID,vehicleID,actiive).toString());
 
 
     }

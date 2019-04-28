@@ -2,6 +2,7 @@ package Transport.Domain;
 
 public class Car {
 
+
     private Vehicle veh;
     private String colour;
     private String model;
@@ -33,6 +34,8 @@ public class Car {
     {
         return veh;
     }
+
+
 
     public static class CarBuilder
     {
@@ -68,8 +71,8 @@ public class Car {
     @Override
 
     public String toString() {
-        return "Bus: \n Bus colour: " + colour + "\n Bus model: " + model + "\n " +
-                "Bus license: " + veh.getVehicleLicense() + "\n Vehicle type: " + veh.getType() + "\n Driver ID: " + veh.getDriverID();
+        return "Car: \n Car colour: " + colour + "\n Car model: " + model + "\n " +
+                "Car license: " + veh.getVehicleLicense() + "\n Vehicle type: " + veh.getType() + "\n Driver ID: " + veh.getDriverID();
     }
 
 

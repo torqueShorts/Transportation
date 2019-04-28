@@ -5,9 +5,10 @@ import Transport.Domain.Warrant;
 
 public class WarrantFactory {
 
-    public static Warrant getWarrant(String driverID, String vehLicense, boolean active)
+    public static Warrant getWarrant(String warrantID, String driverID, String vehLicense, boolean active)
     {
         return new Warrant.WarrantBuilder()
+                .warrantID(warrantID)
                 .driverID(driverID)
                 .vehLicense(vehLicense)
                 .active(active)

@@ -2,6 +2,7 @@ package Transport.Domain;
 
 public class Warrant {
 
+    private String warrantID;
     private String driverID;
     private String vehLicense;
     private boolean active;
@@ -13,11 +14,14 @@ public class Warrant {
 
     private Warrant(WarrantBuilder builder)
     {
+        this.warrantID = builder.warrantID;
         this.driverID = builder.driverID;
         this.vehLicense = builder.vehLicense;
         this.active = builder.active;
 
     }
+
+    public String getWarrantID(){ return warrantID;}
 
     public String getDriverID()
     {
@@ -36,10 +40,16 @@ public class Warrant {
 
     public static class WarrantBuilder
     {
+        private String warrantID;
         private String driverID;
         private String vehLicense;
         private boolean active;
 
+        public WarrantBuilder warrantID(String warrantID)
+        {
+            this.warrantID = warrantID;
+            return this;
+        }
         public WarrantBuilder driverID(String driverID)
         {
             this.driverID = driverID;
@@ -68,7 +78,7 @@ public class Warrant {
 
     public String toString()
     {
-        return "Driver ID: " + driverID + "\nVehicle License: " + vehLicense + "\nWarrant valid: " + active;
+        return "Warrant ID: " + warrantID + "\nDriver ID: " + driverID + "\nVehicle License: " + vehLicense + "\nWarrant valid: " + active;
     }
 
 
