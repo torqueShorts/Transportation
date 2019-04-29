@@ -64,7 +64,7 @@ public class MinorOffenceRepositoryImpl implements MinorOffenceRepository {
     {
         int count = 1;
 
-        MinorOffense val = null;
+
 
         for(int i = 0; i < minorFines.size(); i++)
         {
@@ -73,7 +73,6 @@ public class MinorOffenceRepositoryImpl implements MinorOffenceRepository {
                 minorFines.remove(i);
                 count--;
                 System.out.println("Minor fine has been removed");
-                val = minorFines.get(i);
             }
         }
 

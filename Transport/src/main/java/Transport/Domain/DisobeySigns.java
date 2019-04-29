@@ -18,6 +18,22 @@ public class DisobeySigns {
         this.fine = builder.fine;
     }
 
+    public String getSign()
+    {
+        return sign;
+    }
+
+    public int getAmount()
+    {
+        return amount;
+    }
+
+    public Fine getFine()
+    {
+        return fine;
+    }
+
+
     public static class DisobeySignsBuilder
     {
         private String sign;
