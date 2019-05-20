@@ -2,8 +2,11 @@ package Transport.Repository.Impl.ExternalRepoImplementations;
 
 import Transport.Domain.External.Court;
 import Transport.Repository.Repositories.ExternalRepositories.CourtRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
+
+@Repository("CourtRepo")
 
 public class CourtRepositoryImpl implements CourtRepository
 {

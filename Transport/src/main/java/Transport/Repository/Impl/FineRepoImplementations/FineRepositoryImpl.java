@@ -2,8 +2,11 @@ package Transport.Repository.Impl.FineRepoImplementations;
 
 import Transport.Domain.Fines.Fine;
 import Transport.Repository.Repositories.FineRepositories.FineRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
+
+@Repository("FineRepo")
 
 public class FineRepositoryImpl implements FineRepository {
 

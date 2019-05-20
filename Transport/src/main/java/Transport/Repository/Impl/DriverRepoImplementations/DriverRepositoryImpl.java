@@ -2,9 +2,11 @@ package Transport.Repository.Impl.DriverRepoImplementations;
 
 import Transport.Domain.Drivers.Driver;
 import Transport.Repository.Repositories.DriverRepositories.DriverRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
+@Repository("DriverRepo")
 public class DriverRepositoryImpl implements DriverRepository
 {
 

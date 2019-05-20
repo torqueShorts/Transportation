@@ -1,11 +1,14 @@
 package Transport.Repository.Impl.VehicleRepoImplementations;
 
 import Transport.Domain.Vehicles.HeavyDuty;
-import Transport.Repository.Repositories.VehicleRepositories.HeavyDutyRepositories;
+import Transport.Repository.Repositories.VehicleRepositories.HeavyDutyRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
-public class HeavyDutyRepositoryImpl implements HeavyDutyRepositories
+
+@Repository("HeavyDutyRepo")
+public class HeavyDutyRepositoryImpl implements HeavyDutyRepository
 {
 
     private static HeavyDutyRepositoryImpl repo = null;

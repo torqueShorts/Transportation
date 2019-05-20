@@ -2,8 +2,11 @@ package Transport.Repository.Impl.DepartmentRepoImplementations;
 
 import Transport.Domain.Department.TrafficChief;
 import Transport.Repository.Repositories.DepartmentRepositories.TrafficChiefRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
+
+@Repository("TrafficChiefRepo")
 
 public class TrafficChiefRepositoryImpl implements TrafficChiefRepository
 {

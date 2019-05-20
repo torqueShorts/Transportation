@@ -2,8 +2,11 @@ package Transport.Repository.Impl.DriverRepoImplementations;
 
 import Transport.Domain.Drivers.NationalDriver;
 import Transport.Repository.Repositories.DriverRepositories.NationalDriverRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
+
+@Repository("NationalDriverRepo")
 
 public class NationalDriverRepositoryImpl implements NationalDriverRepository
 {

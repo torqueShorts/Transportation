@@ -2,9 +2,12 @@ package Transport.Repository.Impl.VehicleRepoImplementations;
 
 import Transport.Domain.Vehicles.Motorbike;
 import Transport.Repository.Repositories.VehicleRepositories.MotorbikeRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
+
+@Repository("MotorbikeRepo")
 public class MotorbikeRepositoryImpl implements MotorbikeRepository
 {
     private static MotorbikeRepositoryImpl repo = null;

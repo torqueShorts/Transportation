@@ -2,9 +2,11 @@ package Transport.Repository.Impl.FineRepoImplementations.MinorOffenses;
 
 import Transport.Domain.Fines.MinorOffenses.MinorOffense;
 import Transport.Repository.Repositories.FineRepositories.MinorOffenceRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
+@Repository("MinorOffenseRepo")
 public class MinorOffenceRepositoryImpl implements MinorOffenceRepository {
 
     private static MinorOffenceRepositoryImpl repo = null;

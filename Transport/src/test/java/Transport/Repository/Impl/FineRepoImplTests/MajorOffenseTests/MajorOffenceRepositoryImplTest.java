@@ -23,8 +23,6 @@ public class MajorOffenceRepositoryImplTest {
     MajorOffense value3 = object.getMajorOffense("DisobeySign",fin2);
 
 
-
-
     @Test
     public void create()
     {

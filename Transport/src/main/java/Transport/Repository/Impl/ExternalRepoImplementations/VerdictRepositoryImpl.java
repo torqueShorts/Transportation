@@ -2,9 +2,11 @@ package Transport.Repository.Impl.ExternalRepoImplementations;
 
 import Transport.Domain.External.Verdict;
 import Transport.Repository.Repositories.ExternalRepositories.VerdictRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
+@Repository("VerdictRepo")
 public class VerdictRepositoryImpl implements VerdictRepository
 {
 

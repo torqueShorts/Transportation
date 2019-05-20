@@ -2,9 +2,11 @@ package Transport.Repository.Impl.FineRepoImplementations.MajorOffenses;
 
 import Transport.Domain.Fines.MajorOffenses.HitNRun;
 import Transport.Repository.Repositories.FineRepositories.HitNRunRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
+@Repository("HitNRunRepo")
 public class HitNRunRepositoryImpl implements HitNRunRepository
 {
 
