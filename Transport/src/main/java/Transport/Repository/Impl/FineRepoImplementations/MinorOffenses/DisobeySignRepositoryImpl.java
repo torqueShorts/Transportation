@@ -2,9 +2,12 @@ package Transport.Repository.Impl.FineRepoImplementations.MinorOffenses;
 
 import Transport.Domain.Fines.MinorOffenses.DisobeySigns;
 import Transport.Repository.Repositories.FineRepositories.DisobeySignRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
+
+@Repository("DisobeySignRepo")
 public class DisobeySignRepositoryImpl implements DisobeySignRepository
 {
 

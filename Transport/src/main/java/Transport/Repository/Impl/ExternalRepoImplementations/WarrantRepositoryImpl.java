@@ -2,9 +2,12 @@ package Transport.Repository.Impl.ExternalRepoImplementations;
 
 import Transport.Domain.External.Warrant;
 import Transport.Repository.Repositories.ExternalRepositories.WarrantRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
+
+@Repository("WarrantRepo")
 public class WarrantRepositoryImpl implements WarrantRepository {
 
     private static WarrantRepositoryImpl repo;

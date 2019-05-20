@@ -2,9 +2,12 @@ package Transport.Repository.Impl.VehicleRepoImplementations;
 
 import Transport.Domain.Vehicles.Bus;
 import Transport.Repository.Repositories.VehicleRepositories.BusRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
+
+@Repository("BusRepo")
 public class BusRepositoryImpl implements BusRepository
 {
 

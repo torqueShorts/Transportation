@@ -3,9 +3,11 @@ package Transport.Repository.Impl.DriverRepoImplementations;
 import Transport.Domain.Drivers.Driver;
 import Transport.Domain.Drivers.InternationalDriver;
 import Transport.Repository.Repositories.DriverRepositories.InternationalDriverRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
+@Repository("InternationalDriverRepo")
 public class InternationalDriverRepositoryImpl implements InternationalDriverRepository
 {
 

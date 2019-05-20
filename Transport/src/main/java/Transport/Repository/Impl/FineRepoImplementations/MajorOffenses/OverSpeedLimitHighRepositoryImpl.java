@@ -2,9 +2,12 @@ package Transport.Repository.Impl.FineRepoImplementations.MajorOffenses;
 
 import Transport.Domain.Fines.MajorOffenses.OverSpeedLimitHigh;
 import Transport.Repository.Repositories.FineRepositories.OverSpeedLimitHighRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
+
+@Repository("OverSpeedLimitHighRepo")
 public class OverSpeedLimitHighRepositoryImpl implements OverSpeedLimitHighRepository
 {
 

@@ -2,9 +2,11 @@ package Transport.Repository.Impl.FineRepoImplementations.MajorOffenses;
 
 import Transport.Domain.Fines.MajorOffenses.MajorOffense;
 import Transport.Repository.Repositories.FineRepositories.MajorOffenceRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
+@Repository("MajorOffenseRepo")
 public class MajorOffenceRepositoryImpl implements MajorOffenceRepository
 {
 

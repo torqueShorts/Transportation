@@ -2,9 +2,12 @@ package Transport.Repository.Impl.VehicleRepoImplementations;
 
 import Transport.Domain.Vehicles.Car;
 import Transport.Repository.Repositories.VehicleRepositories.CarRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
+
+@Repository("CarfRepo")
 public class CarRepositoryImpl implements CarRepository
 {
     private static CarRepositoryImpl repo = null;

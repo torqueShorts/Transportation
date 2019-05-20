@@ -2,9 +2,11 @@ package Transport.Repository.Impl.ExternalRepoImplementations;
 
 import Transport.Domain.External.Payment;
 import Transport.Repository.Repositories.ExternalRepositories.PaymentRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
+@Repository("PaymentRepo")
 public class PaymentRepositoryImpl implements PaymentRepository {
 
 

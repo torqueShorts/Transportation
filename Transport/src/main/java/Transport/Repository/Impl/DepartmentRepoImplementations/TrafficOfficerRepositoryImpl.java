@@ -2,8 +2,11 @@ package Transport.Repository.Impl.DepartmentRepoImplementations;
 
 import Transport.Domain.Department.TrafficOfficer;
 import Transport.Repository.Repositories.DepartmentRepositories.TrafficOfficerRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
+
+@Repository("TrafficOfficerRepo")
 
 public class TrafficOfficerRepositoryImpl implements TrafficOfficerRepository
 {

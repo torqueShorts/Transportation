@@ -2,9 +2,12 @@ package Transport.Repository.Impl.ExternalRepoImplementations;
 
 import Transport.Domain.External.Trial;
 import Transport.Repository.Repositories.ExternalRepositories.TrialRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
+
+@Repository("TrialRepo")
 public class TrialRepositoryImpl implements TrialRepository
 {
 
